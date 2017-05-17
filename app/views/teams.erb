@@ -1,0 +1,17 @@
+<h1><%=@team[:name]%></h1><br>
+
+<div class="team">
+  <h3>Team Motto: <%= @team[:motto] %></h3><br>
+</div><br>
+
+<% x = 0 %>
+<% @members.each do |hero|%>
+  <% x = x.to_s %>
+  <div class="heroes">
+    <h1>Hero Name: <%= @members[x][:name] %></h1>
+    <p>Hero Power: <%= @members[x][:power] %></p><br>
+    <p>Hero Biography: <%= @members[x][:biography] %></p><br>
+  </div><br>
+  <% x = x.to_i %>
+  <% x += 1 %>
+<% end %>
